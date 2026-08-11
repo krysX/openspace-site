@@ -1,0 +1,3 @@
+I am using vanilla HTML+CSS+JS for now
+
+Might switch to Svelte in the near future
