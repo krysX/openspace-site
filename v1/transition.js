@@ -1,4 +1,6 @@
 function changeOpenSubmenuTo(id) {
+    if (id === "") return;
+
     let btns = document.getElementsByClassName('submenu-btn');
     let divs = document.getElementsByClassName('submenu');
 
@@ -12,9 +14,22 @@ function changeOpenSubmenuTo(id) {
     document.getElementById(divId).classList.remove('hidden');
 }
 
-function onSubmenuMouseOver(id) {
-    const timeoutMs = 200;
-    setTimeout(changeOpenSubmenuTo, timeoutMs, id);
+console.warn("transition.js successfully loaded");
+
+let submenuBtnLock = false;
+const timeoutMs = 200;
+
+function onSubmenuMouseOver(e) {
+    const id = e.target.id;
+    console.log(id);
+
+    if (submenuBtnLock === true) return;
+    changeOpenSubmenuTo(id);
+    submenuBtnLock = true;
+    setTimeout(() => { submenuBtnLock = false; }, 100);
 }
 
-// const el = document.querySelectorAll()
+document.querySelectorAll('.submenu-btn').forEach((el) => {
+    // alert(el.id);
+    el.addEventListener('mouseover', onSubmenuMouseOver);
+});

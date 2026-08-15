@@ -5,37 +5,40 @@
         <title>Open Space Egyesület - kezdőoldal</title>
         <link rel="stylesheet" href="style.css"/>
         <link rel="stylesheet" href="menu.css"/>
-        <script src="transition.js">
-            
-            
-        </script>
     </head>
+
     <body>
         <header>
-            <a href="index.html"><img src="logo_with_text.svg" /></a>
+            <a href="index.html" id="logo">
+                <img src="logo_vectored.svg" />
+                <div id="logo-text">
+                    <p>open</p>
+                    <p>space</p>
+                </div>
+            </a>
             <nav class="sidebar">
-                <a href="" id="fobb" class="submenu-btn hidden" onmouseover="onSubmenuMouseOver('fobb')"><span>főbb menüpontok</span></a>
+                <a href="" id="fobb" class="submenu-btn hidden" ><span>főbb menüpontok</span></a>
                 <div id="fobb-menu" class="submenu">
                     <a href="">aktuális</a>
                     <a href="">a helyről</a>
                     <a href="">rólunk</a>
                     <a href="https://facebook.com/openspacebudapest">kapcsolat</a>
                 </div>
-                <a href="" id="fejl" class="submenu-btn" onmouseover="onSubmenuMouseOver('fejl')"><span>fejlesztő központ</span></a>
+                <a href="" id="fejl" class="submenu-btn" ><span>fejlesztő központ</span></a>
                 <div id="fejl-menu" class="submenu hidden">
                     <a href="">autizmus</a>
                     <a href="">barátkozás</a>
                     <a href="">családterápia</a>
                     <a href="https://facebook.com/openspacebudapest">tanácsadás</a>
                 </div>
-                <a href="" id="tehetseg" class="submenu-btn" onmouseover="onSubmenuMouseOver('tehetseg')"><span>tehetséggondozás</span></a>
+                <a href="" id="tehetseg" class="submenu-btn" ><span>tehetséggondozás</span></a>
                 <div id="tehetseg-menu" class="submenu hidden">
                     <a href="">töri műhely</a>
                     <a href="">termtud műhely</a>
                     <a href="">scifi műhely</a>
                     <a href="https://facebook.com/openspacebudapest">irodalmi műhely</a>
                 </div>
-                <a href="" id="kozosseg" class="submenu-btn" onmouseover="onSubmenuMouseOver('kozosseg')"><span>közösségi tér</span></a>
+                <a href="" id="kozosseg" class="submenu-btn" ><span>közösségi tér</span></a>
                 <div id="kozosseg-menu" class="submenu hidden">
                     <a href="">programok</a>
                     <a href="">workshopok</a>
@@ -104,5 +107,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis maxime dolores di
         <footer>
             (c) 2026 Open Space Egyesület
         </footer>
+        <script src="transition.js"></script>
     </body>
 </html>
